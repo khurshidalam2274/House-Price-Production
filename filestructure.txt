@@ -1,0 +1,22 @@
+|-- .gitignore
+|-- HousePricePrediction
+    |-- __init__.py
+    |-- __pycache__
+        |-- __init__.cpython-313.pyc
+        |-- settings.cpython-313.pyc
+        |-- urls.cpython-313.pyc
+        |-- views.cpython-313.pyc
+        |-- wsgi.cpython-313.pyc
+    |-- asgi.py
+    |-- settings.py
+    |-- urls.py
+    |-- views.py
+    |-- wsgi.py
+|-- README.md
+|-- db.sqlite3
+|-- manage.py
+|-- static
+    |-- homeimg.jpg
+|-- templates
+    |-- home.html
+    |-- predict.html

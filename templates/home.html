@@ -1,0 +1,104 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <style>
+    body {
+    background-image: url("{% static 'homeimg.jpg' %}");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    height: 100vh; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    font-family: Arial, sans-serif;
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+header {
+    width: 80%;
+    text-align: center;
+    position:absolute;
+    top: 20px;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+    background: rgba(189, 216, 231, 0.5);
+    padding: 15px 30px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+
+main {
+    position: absolute;
+    bottom: 40px; /* Positions it near the bottom of the page */
+    left: 50%;
+    transform: translateX(-50%); /* Center the main container horizontally */
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    backdrop-filter: blur(5px);
+    width: 100%;
+    height: auto;
+}
+
+
+p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(135deg, #5cb85c, #3d8b3d);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #3d8b3d, #5cb85c);
+    transform: scale(1.05);
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Welcome to House Price Prediction System</h2>
+    </header>
+
+    <main>
+        <p>Hello, {{ user.username }}! Ready to predict house prices?</p>
+        <form action="{% url 'predict' %}">
+            <button type="submit">START</button>
+        </form>
+    </main>
+</body>
+</html>
